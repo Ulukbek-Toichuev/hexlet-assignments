@@ -12,18 +12,19 @@ public class Segment{
 		this.endPoint = endPoint;
 	}
 
-	public Point getMidPoint(){
-		midPoint.setX(((beginPoint.getBeginPoint + endPoint.getBeginPoint)/2));
-		midPoint.setY(((beginPoint.getEndPoint + endPoint.getEndPoint)/2));
-		return midPoint;
-	}
+    public Point getMidPoint(){
+        midPoint.setX((beginPoint.getX() + endPoint.getX())/2);
+        midPoint.setY((beginPoint.getY() + endPoint.getY())/2);
+        
+        return midPoint;
+    }
 
-	public int getBeginPoint(){
-		return beginPoint;
-	}
+    public Point getBeginPoint(){
+        return beginPoint;
+    }
 
-	public int getEndPoint(){
-		return endPoint;
-	}
+    public Point getEndPoint(){
+        return endPoint;
+    }
 }
 // END
