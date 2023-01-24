@@ -1,7 +1,7 @@
 package exercise;
 
 // BEGIN
-public Class Segment{
+public class Segment{
 	
 	private Point beginPoint;
 	private Point endPoint;
@@ -13,7 +13,6 @@ public Class Segment{
 	}
 
 	public Point getMidPoint(){
-		//Point midPoint = new Point( ((beginPoint.getBeginPoint + endPoint.getBeginPoint)/2), ((beginPoint.getEndPoint + endPoint.getEndPoint)/2) )
 		midPoint.setX(((beginPoint.getBeginPoint + endPoint.getBeginPoint)/2));
 		midPoint.setY(((beginPoint.getEndPoint + endPoint.getEndPoint)/2));
 		return midPoint;
