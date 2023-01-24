@@ -5,7 +5,7 @@ public class Segment{
 	
 	private Point beginPoint;
 	private Point endPoint;
-	private Point midPoint;
+	//private Point midPoint;
 
 	public Segment(Point beginPoint, Point endPoint){
 		this.beginPoint = beginPoint;
@@ -13,6 +13,7 @@ public class Segment{
 	}
 
     public Point getMidPoint(){
+    	Point midPoint = new Point();
         midPoint.setX((beginPoint.getX() + endPoint.getX())/2);
         midPoint.setY((beginPoint.getY() + endPoint.getY())/2);
         
