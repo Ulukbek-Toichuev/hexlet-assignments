@@ -6,7 +6,7 @@ public class Cottage implements Home{
 	private double area;
 	private int floorCount;
 
-	public Cottage(double are, int floorCount){
+	public Cottage(double area, int floorCount){
 		this.area = area;
 		this.floorCount = floorCount;
 	}
@@ -16,18 +16,21 @@ public class Cottage implements Home{
 		return area;
 	}
 
-	public int compareTo(Cottage cottage){
-		if (this.getArea() > cottage.getArea()){
+	@Override
+	public int compareTo(Home home){
+		if (this.getArea() > home.getArea()){
 			return 1;
-		}else if(this.getArea() < cottage.getArea()){
+		}else if(this.getArea() < home.getArea()){
 			return -1;
 		}else{
 			return 0;
 		}
 	}
 
+	@Override
 	public String toString(){
-		return floorCount + " этажный коттедж площадью "+ area +" метров";
+		String res = floorCount + " этажный коттедж площадью "+ this.getArea() +" метров";
+		return res;
 	}
 
 }
