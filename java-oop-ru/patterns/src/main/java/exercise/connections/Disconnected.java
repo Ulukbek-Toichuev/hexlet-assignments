@@ -3,7 +3,7 @@ package exercise.connections;
 // BEGIN
 public class Disconnected implements Connection{
 	
-	private final string status = "disconnected";
+	private final String status = "disconnected";
 
 	@Override
 	public String getCurrentState(){
