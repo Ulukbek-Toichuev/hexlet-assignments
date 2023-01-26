@@ -1,40 +1,45 @@
 package exercise;
+import exercise.connections.Connected;
+import exercise.connections.Connection;
+import exercise.connections.Disconnected;
+
+import java.util.List;
+import java.util.ArrayList;
 
 // BEGIN
-public class TcpConnection {
+public class TcpConnection{
 
-	private String host;
-	private int port;
-	private Connection state = new Disconnected();
+    private String host;
+    private int port;
+    private Connection state = new Disconnected();
 
-	public TcpConnection(String host, int port) {
-		this.host = host;
-		this.port = port;
-	}
+    public TcpConnection(String host, int port){
+        this.host = host;
+        this.port = port;
+    }
 
-	public String getCurrentState() {
-		return state.getCurrentState();
-	}
+    public String getCurrentState(){
+        return state.getCurrentState();
+    }
 
-	public void connect() {
-		state.connect(this);
-	}
+    public void connect(){
+        state.connect(this);
+    }
 
-	public void disconnect() {
-		state.disconnect(this);
-	}
+    public void disconnect(){
+        state.disconnect(this);
+    }
 
-	public void write(String message) {
-		state.write(message);
-	}
+    public void write(String message){
+        state.write(message);
+    }
 
-	public void setState(Connection connection) {
-		this.state = connection;
-	}
+    public void setState(Connection connection){
+        this.state = connection;
+    }
 
-	public Connection getState() {
-		return state;
-	}
-
+    public Connection getState(){
+        return state;
+    }
 }
 // END
